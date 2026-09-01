@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,14 @@
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, "Noto Sans Bengali", sans-serif;
     background:#050505;
-    color:white;
+    color:#fff;
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:25px;
+    padding:25px 18px;
 }
 
 .container{
@@ -33,76 +33,130 @@ body{
 .logo{
     width:145px;
     height:145px;
-    border-radius:50%;
     margin:0 auto 22px;
+    border-radius:50%;
     border:2px solid #d7b55b;
+    background:#111;
     display:flex;
-    justify-content:center;
     align-items:center;
-    background:linear-gradient(145deg,#171717,#020202);
+    justify-content:center;
     box-shadow:0 0 35px rgba(215,181,91,.25);
 }
 
-.logo span{
+.logo-text{
     font-size:42px;
     font-weight:bold;
     color:#d7b55b;
 }
 
 h1{
-    font-size:30px;
-    margin-bottom:10px;
+    font-size:29px;
+    margin-bottom:9px;
 }
 
 .subtitle{
     color:#bdbdbd;
-    font-size:16px;
-    line-height:1.6;
-    margin-bottom:25px;
-}
-
-.members{
     font-size:15px;
-    color:#d7b55b;
+    line-height:1.7;
     margin-bottom:25px;
 }
 
-.telegram{
-    display:block;
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+}
+
+.btn{
     width:100%;
-    padding:18px;
+    min-height:64px;
+    padding:12px 18px;
     border-radius:14px;
-    background:#229ED9;
-    color:white;
     text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    box-shadow:0 10px 30px rgba(34,158,217,.25);
-    transition:.2s;
-}
-
-.telegram:hover{
-    transform:translateY(-2px);
-}
-
-.features{
-    margin-top:28px;
-    display:grid;
-    gap:12px;
-}
-
-.feature{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-align:left;
+    transition:.2s ease;
+    border:1px solid #292929;
     background:#141414;
-    border:1px solid #262626;
-    border-radius:12px;
-    padding:15px;
-    color:#ddd;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    border-color:#d7b55b;
+}
+
+.icon{
+    width:42px;
+    height:42px;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:bold;
+    flex-shrink:0;
+}
+
+.text{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.bn{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.en{
+    font-size:13px;
+    color:#999;
+}
+
+.telegram .icon{
+    background:#229ED9;
+}
+
+.facebook .icon{
+    background:#1877F2;
+}
+
+.instagram .icon{
+    background:#E1306C;
+}
+
+.trading{
+    background:linear-gradient(135deg,#1c1709,#0e0e0e);
+    border:1px solid #d7b55b;
+}
+
+.trading .icon{
+    background:#d7b55b;
+    color:#000;
 }
 
 .footer{
-    margin-top:30px;
-    color:#777;
-    font-size:12px;
+    margin-top:25px;
+    color:#666;
+    font-size:11px;
+}
+
+@media(max-width:380px){
+    h1{
+        font-size:25px;
+    }
+
+    .logo{
+        width:125px;
+        height:125px;
+    }
+
+    .btn{
+        min-height:60px;
+    }
 }
 </style>
 </head>
@@ -112,43 +166,73 @@ h1{
 <div class="container">
 
     <div class="logo">
-        <span>JT</span>
+        <div class="logo-text">JT</div>
     </div>
 
     <h1>JIRMAS TRADE ZONE 📈</h1>
 
     <p class="subtitle">
-        Trading Education, Market Analysis<br>
-        & Trading Insights
+        ট্রেডিং শিক্ষা • মার্কেট বিশ্লেষণ • ট্রেডিং ইনসাইট<br>
+        Trading Education • Market Analysis • Trading Insights
     </p>
 
-    <div class="members">
-        🔥 21,000+ Telegram Subscribers
-    </div>
+    <div class="buttons">
 
-    <a class="telegram"
-       href="https://t.me/jirmastradezone"
-       target="_blank">
-       🚀 JOIN TELEGRAM CHANNEL
-    </a>
+        <a class="btn telegram"
+           href="https://t.me/jirmastradezone"
+           target="_blank"
+           rel="noopener noreferrer">
 
-    <div class="features">
+            <div class="icon">✈️</div>
 
-        <div class="feature">
-            📊 Market Analysis
-        </div>
+            <div class="text">
+                <span class="bn">টেলিগ্রাম চ্যানেলে যোগ দিন</span>
+                <span class="en">Join Telegram Channel</span>
+            </div>
 
-        <div class="feature">
-            📈 Trading Insights
-        </div>
+        </a>
 
-        <div class="feature">
-            🎯 Trading Education
-        </div>
+        <a class="btn facebook"
+           href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
+           target="_blank"
+           rel="noopener noreferrer">
 
-        <div class="feature">
-            🔔 Daily Market Updates
-        </div>
+            <div class="icon">f</div>
+
+            <div class="text">
+                <span class="bn">ফেসবুক পেজে যুক্ত হোন</span>
+                <span class="en">Join Facebook Page</span>
+            </div>
+
+        </a>
+
+        <a class="btn instagram"
+           href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="icon">◎</div>
+
+            <div class="text">
+                <span class="bn">ইনস্টাগ্রামে ফলো করুন</span>
+                <span class="en">Follow on Instagram</span>
+            </div>
+
+        </a>
+
+        <a class="btn trading"
+           href="https://broker-qx.pro/sign-up/?lid=2167447"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="icon">🚀</div>
+
+            <div class="text">
+                <span class="bn">ট্রেডিং অ্যাকাউন্ট খুলুন</span>
+                <span class="en">Create Trading Account</span>
+            </div>
+
+        </a>
 
     </div>
 
