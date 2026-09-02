@@ -32,7 +32,7 @@ body::before{
     inset:0;
     background:
         linear-gradient(
-            rgba(0,0,0,.72),
+            rgba(0,0,0,.70),
             rgba(0,0,0,.88)
         ),
         url("IMG_5520.PNG") center/cover no-repeat;
@@ -47,23 +47,23 @@ body::after{
         radial-gradient(
             circle at 50% 25%,
             rgba(212,160,23,.18),
-            transparent 35%
+            transparent 38%
         );
     z-index:-1;
 }
 
-/* MAIN */
+/* MAIN CONTAINER */
 .container{
     width:100%;
     max-width:680px;
     margin:auto;
-    padding:45px 24px 30px;
+    padding:38px 22px 30px;
 }
 
 /* LOGO */
 .logo-area{
     text-align:center;
-    margin-bottom:20px;
+    margin-bottom:16px;
 }
 
 .logo{
@@ -73,7 +73,6 @@ body::after{
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
 }
 
 .logo svg{
@@ -84,13 +83,13 @@ body::after{
         drop-shadow(0 0 22px rgba(255,190,40,.12));
 }
 
-/* TITLE */
+/* BRAND */
 .brand{
     text-align:center;
     font-size:38px;
     font-weight:800;
     letter-spacing:1.5px;
-    margin-top:5px;
+    margin-top:4px;
 }
 
 .brand .gold{
@@ -101,32 +100,53 @@ body::after{
     color:#fff;
 }
 
+/* TAGLINES */
 .tagline-bn{
     text-align:center;
-    margin-top:14px;
+    margin-top:13px;
     font-size:21px;
     font-weight:700;
     color:#f2c34b;
+    line-height:1.45;
 }
 
 .tagline-en{
     text-align:center;
-    margin-top:8px;
+    margin-top:7px;
     font-size:17px;
     color:#ddd;
+    line-height:1.4;
+}
+
+/* INSTRUCTION IMAGE */
+.guide{
+    width:100%;
+    margin:32px auto 0;
+}
+
+.guide img{
+    display:block;
+    width:100%;
+    max-width:640px;
+    height:auto;
+    margin:0 auto;
+    border-radius:16px;
+    border:1px solid rgba(245,185,30,.55);
+    box-shadow:
+        0 8px 28px rgba(0,0,0,.55);
 }
 
 /* BUTTONS */
 .buttons{
-    margin-top:55px;
+    margin-top:28px;
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:17px;
 }
 
 .btn{
     width:100%;
-    min-height:108px;
+    min-height:104px;
     display:flex;
     align-items:center;
     text-decoration:none;
@@ -135,15 +155,15 @@ body::after{
     background:
         linear-gradient(
             135deg,
-            rgba(35,35,35,.92),
-            rgba(12,12,12,.94)
+            rgba(35,35,35,.94),
+            rgba(12,12,12,.96)
         );
 
     border:1px solid rgba(255,255,255,.18);
-    border-radius:22px;
+    border-radius:21px;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,.4),
+        0 8px 25px rgba(0,0,0,.40),
         inset 0 1px 0 rgba(255,255,255,.06);
 
     transition:.25s ease;
@@ -152,9 +172,6 @@ body::after{
 .btn:hover{
     transform:translateY(-3px);
     border-color:#e6ad20;
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.5),
-        0 0 20px rgba(230,173,32,.12);
 }
 
 .btn:active{
@@ -163,10 +180,10 @@ body::after{
 
 /* ICON */
 .icon-box{
-    width:68px;
-    height:68px;
-    min-width:68px;
-    margin-left:18px;
+    width:66px;
+    height:66px;
+    min-width:66px;
+    margin-left:17px;
 
     display:flex;
     align-items:center;
@@ -176,9 +193,6 @@ body::after{
 
     background:#111;
     border:1px solid rgba(255,255,255,.14);
-
-    box-shadow:
-        inset 0 0 12px rgba(255,255,255,.03);
 }
 
 .icon-box svg{
@@ -186,41 +200,42 @@ body::after{
     height:36px;
 }
 
-/* TEXT */
+/* BUTTON TEXT */
 .btn-text{
     flex:1;
-    padding:0 15px;
+    min-width:0;
+    padding:0 14px;
 }
 
 .bn{
     display:block;
     font-size:21px;
     font-weight:700;
-    margin-bottom:6px;
+    margin-bottom:5px;
+    line-height:1.35;
 }
 
 .en{
     display:block;
-    font-size:16px;
+    font-size:15px;
     color:#aaa;
 }
 
 .arrow{
     font-size:32px;
     color:#888;
-    margin-right:20px;
-    font-weight:300;
+    margin-right:18px;
 }
 
-/* TRADING BUTTON */
+/* TRADING */
 .trading{
-    border-color:rgba(239,183,29,.8);
+    border-color:rgba(239,183,29,.85);
 }
 
 /* FOOTER */
 .footer{
     text-align:center;
-    margin-top:55px;
+    margin-top:45px;
     padding-bottom:10px;
     font-size:13px;
     color:#777;
@@ -234,22 +249,22 @@ body::after{
 @media(max-width:600px){
 
     .container{
-        padding:38px 24px 25px;
+        padding:30px 18px 25px;
     }
 
     .logo{
-        width:145px;
-        height:145px;
+        width:135px;
+        height:135px;
     }
 
     .logo svg{
-        width:140px;
-        height:140px;
+        width:130px;
+        height:130px;
     }
 
     .brand{
-        font-size:32px;
-        letter-spacing:1px;
+        font-size:31px;
+        letter-spacing:.8px;
     }
 
     .tagline-bn{
@@ -257,28 +272,45 @@ body::after{
     }
 
     .tagline-en{
-        font-size:15px;
+        font-size:14px;
+    }
+
+    /* IMAGE SMALL ON MOBILE */
+    .guide{
+        margin-top:27px;
+    }
+
+    .guide img{
+        width:100%;
+        max-width:100%;
+        border-radius:13px;
     }
 
     .buttons{
-        margin-top:48px;
-        gap:18px;
+        margin-top:22px;
+        gap:15px;
     }
 
     .btn{
-        min-height:105px;
-        border-radius:20px;
+        min-height:98px;
+        border-radius:19px;
     }
 
     .icon-box{
-        width:64px;
-        height:64px;
-        min-width:64px;
-        margin-left:15px;
+        width:61px;
+        height:61px;
+        min-width:61px;
+        margin-left:13px;
+        border-radius:17px;
+    }
+
+    .icon-box svg{
+        width:34px;
+        height:34px;
     }
 
     .bn{
-        font-size:19px;
+        font-size:18px;
     }
 
     .en{
@@ -286,8 +318,8 @@ body::after{
     }
 
     .arrow{
-        margin-right:14px;
-        font-size:28px;
+        font-size:29px;
+        margin-right:13px;
     }
 }
 </style>
@@ -299,11 +331,12 @@ body::after{
 
     <!-- LOGO -->
     <div class="logo-area">
+
         <div class="logo">
 
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 200 200"
+                 xmlns="http://www.w3.org/2000/svg">
 
-                <!-- Outer circle -->
                 <circle
                     cx="100"
                     cy="100"
@@ -323,32 +356,64 @@ body::after{
                 />
 
                 <!-- Candlesticks -->
+
                 <line x1="55" y1="85" x2="55" y2="125"
-                      stroke="#d9a51c" stroke-width="4"/>
-                <rect x="47" y="96" width="16" height="22"
-                      rx="2" fill="#d9a51c"/>
+                      stroke="#d9a51c"
+                      stroke-width="4"/>
+
+                <rect x="47" y="96"
+                      width="16"
+                      height="22"
+                      rx="2"
+                      fill="#d9a51c"/>
+
 
                 <line x1="75" y1="70" x2="75" y2="120"
-                      stroke="#fff" stroke-width="4"/>
-                <rect x="67" y="82" width="16" height="27"
-                      rx="2" fill="#fff"/>
+                      stroke="#fff"
+                      stroke-width="4"/>
+
+                <rect x="67" y="82"
+                      width="16"
+                      height="27"
+                      rx="2"
+                      fill="#fff"/>
+
 
                 <line x1="95" y1="58" x2="95" y2="112"
-                      stroke="#d9a51c" stroke-width="4"/>
-                <rect x="87" y="70" width="16" height="30"
-                      rx="2" fill="#d9a51c"/>
+                      stroke="#d9a51c"
+                      stroke-width="4"/>
+
+                <rect x="87" y="70"
+                      width="16"
+                      height="30"
+                      rx="2"
+                      fill="#d9a51c"/>
+
 
                 <line x1="115" y1="72" x2="115" y2="116"
-                      stroke="#fff" stroke-width="4"/>
-                <rect x="107" y="82" width="16" height="25"
-                      rx="2" fill="#fff"/>
+                      stroke="#fff"
+                      stroke-width="4"/>
+
+                <rect x="107" y="82"
+                      width="16"
+                      height="25"
+                      rx="2"
+                      fill="#fff"/>
+
 
                 <line x1="135" y1="50" x2="135" y2="108"
-                      stroke="#d9a51c" stroke-width="4"/>
-                <rect x="127" y="62" width="16" height="31"
-                      rx="2" fill="#d9a51c"/>
+                      stroke="#d9a51c"
+                      stroke-width="4"/>
+
+                <rect x="127" y="62"
+                      width="16"
+                      height="31"
+                      rx="2"
+                      fill="#d9a51c"/>
+
 
                 <!-- J -->
+
                 <path
                     d="M55 132
                        L55 151
@@ -363,159 +428,246 @@ body::after{
                 />
 
                 <!-- T -->
+
                 <path
-                    d="M112 126 L153 126
-                       M133 126 L133 166"
+                    d="M112 126
+                       L153 126
+                       M133 126
+                       L133 166"
                     fill="none"
                     stroke="#fff"
                     stroke-width="9"
                     stroke-linecap="round"
                 />
 
-                <!-- Small trend line -->
+                <!-- Trend -->
+
                 <path
-                    d="M45 142 L63 133 L78 145 L96 130 L112 138 L145 112"
+                    d="M45 142
+                       L63 133
+                       L78 145
+                       L96 130
+                       L112 138
+                       L145 112"
                     fill="none"
                     stroke="#d9a51c"
                     stroke-width="3"
-                    opacity=".9"
                 />
 
             </svg>
 
         </div>
+
     </div>
 
+
     <!-- BRAND -->
+
     <div class="brand">
         <span class="gold">JIRMAS</span>
         <span class="white"> TRADE ZONE</span>
     </div>
 
+
     <div class="tagline-bn">
         ট্রেডিং শিক্ষা • মার্কেট বিশ্লেষণ • ট্রেডিং ইনসাইট
     </div>
+
 
     <div class="tagline-en">
         Trading Education • Market Analysis • Trading Insights
     </div>
 
 
+    <!-- HOW TO OPEN GUIDE -->
+
+    <div class="guide">
+
+        <img
+            src="IMG_5525.PNG"
+            alt="লিংক ওপেন না হলে কীভাবে Open in Browser করবেন"
+        >
+
+    </div>
+
+
     <!-- BUTTONS -->
+
     <div class="buttons">
 
+
         <!-- TELEGRAM -->
-        <a class="btn"
-           href="https://t.me/jirmastradezone"
-           target="_blank">
+
+        <a
+            class="btn"
+            href="https://t.me/jirmastradezone"
+            target="_blank"
+            rel="noopener"
+        >
 
             <div class="icon-box">
 
-                <svg viewBox="0 0 48 48"
-                     xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 48 48">
 
-                    <circle cx="24" cy="24" r="23"
-                            fill="#111"/>
+                    <circle
+                        cx="24"
+                        cy="24"
+                        r="23"
+                        fill="#111"
+                    />
 
                     <path
                         d="M8 23.5L39 11L33.5 37L24 29L18 34L19.5 26.5Z"
-                        fill="#229ED9"/>
+                        fill="#229ED9"
+                    />
 
                     <path
                         d="M19.5 26.5L34 16L24 29"
                         fill="none"
                         stroke="#fff"
-                        stroke-width="1.8"/>
+                        stroke-width="1.8"
+                    />
 
                 </svg>
 
             </div>
 
             <div class="btn-text">
-                <span class="bn">টেলিগ্রাম চ্যানেলে যোগ দিন</span>
-                <span class="en">Join Telegram Channel</span>
+
+                <span class="bn">
+                    টেলিগ্রাম চ্যানেলে যোগ দিন
+                </span>
+
+                <span class="en">
+                    Join Telegram Channel
+                </span>
+
             </div>
 
             <span class="arrow">›</span>
+
         </a>
 
 
         <!-- FACEBOOK -->
-        <a class="btn"
-           href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
-           target="_blank">
+
+        <a
+            class="btn"
+            href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener"
+        >
 
             <div class="icon-box">
 
-                <svg viewBox="0 0 48 48"
-                     xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 48 48">
 
-                    <circle cx="24" cy="24" r="23"
-                            fill="#111"/>
+                    <circle
+                        cx="24"
+                        cy="24"
+                        r="23"
+                        fill="#111"
+                    />
 
                     <path
                         d="M27 15H31V9H26C20 9 17 13 17 19V22H12V28H17V40H24V28H30L31 22H24V19C24 17 25 15 27 15Z"
-                        fill="#1877F2"/>
+                        fill="#1877F2"
+                    />
 
                 </svg>
 
             </div>
 
             <div class="btn-text">
-                <span class="bn">ফেসবুক পেজে যুক্ত হন</span>
-                <span class="en">Join Facebook Page</span>
+
+                <span class="bn">
+                    ফেসবুক পেজে যুক্ত হন
+                </span>
+
+                <span class="en">
+                    Join Facebook Page
+                </span>
+
             </div>
 
             <span class="arrow">›</span>
+
         </a>
 
 
         <!-- INSTAGRAM -->
-        <a class="btn"
-           href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
-           target="_blank">
+
+        <a
+            class="btn"
+            href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
+            target="_blank"
+            rel="noopener"
+        >
 
             <div class="icon-box">
 
-                <svg viewBox="0 0 48 48"
-                     xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 48 48">
 
-                    <rect x="8" y="8" width="32" height="32"
-                          rx="9"
-                          fill="none"
-                          stroke="#E1306C"
-                          stroke-width="4"/>
+                    <rect
+                        x="8"
+                        y="8"
+                        width="32"
+                        height="32"
+                        rx="9"
+                        fill="none"
+                        stroke="#E1306C"
+                        stroke-width="4"
+                    />
 
-                    <circle cx="24" cy="24" r="8"
-                            fill="none"
-                            stroke="#E1306C"
-                            stroke-width="4"/>
+                    <circle
+                        cx="24"
+                        cy="24"
+                        r="8"
+                        fill="none"
+                        stroke="#E1306C"
+                        stroke-width="4"
+                    />
 
-                    <circle cx="33" cy="15" r="2.5"
-                            fill="#E1306C"/>
+                    <circle
+                        cx="33"
+                        cy="15"
+                        r="2.5"
+                        fill="#E1306C"
+                    />
 
                 </svg>
 
             </div>
 
             <div class="btn-text">
-                <span class="bn">ইনস্টাগ্রাম ফলো করুন</span>
-                <span class="en">Follow on Instagram</span>
+
+                <span class="bn">
+                    ইনস্টাগ্রাম ফলো করুন
+                </span>
+
+                <span class="en">
+                    Follow on Instagram
+                </span>
+
             </div>
 
             <span class="arrow">›</span>
+
         </a>
 
 
         <!-- TRADING ACCOUNT -->
-        <a class="btn trading"
-           href="https://broker-qx.pro/sign-up/?lid=2167447"
-           target="_blank">
+
+        <a
+            class="btn trading"
+            href="https://broker-qx.pro/sign-up/?lid=2167447"
+            target="_blank"
+            rel="noopener"
+        >
 
             <div class="icon-box">
 
-                <svg viewBox="0 0 48 48"
-                     xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 48 48">
 
                     <path
                         d="M8 36L19 25L25 30L39 14"
@@ -523,7 +675,8 @@ body::after{
                         stroke="#f5b91e"
                         stroke-width="4"
                         stroke-linecap="round"
-                        stroke-linejoin="round"/>
+                        stroke-linejoin="round"
+                    />
 
                     <path
                         d="M31 14H39V22"
@@ -531,27 +684,42 @@ body::after{
                         stroke="#f5b91e"
                         stroke-width="4"
                         stroke-linecap="round"
-                        stroke-linejoin="round"/>
+                        stroke-linejoin="round"
+                    />
 
-                    <line x1="8" y1="40"
-                          x2="40" y2="40"
-                          stroke="#555"
-                          stroke-width="2"/>
+                    <line
+                        x1="8"
+                        y1="40"
+                        x2="40"
+                        y2="40"
+                        stroke="#555"
+                        stroke-width="2"
+                    />
 
                 </svg>
 
             </div>
 
             <div class="btn-text">
-                <span class="bn">ট্রেডিং অ্যাকাউন্ট খুলুন</span>
-                <span class="en">Create Trading Account</span>
+
+                <span class="bn">
+                    ট্রেডিং অ্যাকাউন্ট খুলুন
+                </span>
+
+                <span class="en">
+                    Create Trading Account
+                </span>
+
             </div>
 
             <span class="arrow">›</span>
+
         </a>
 
     </div>
 
+
+    <!-- FOOTER -->
 
     <div class="footer">
         ©️ 2026 <span>Jirmas Trade Zone</span>
