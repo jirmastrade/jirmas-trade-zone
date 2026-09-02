@@ -13,149 +13,306 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, "Noto Sans Bengali", sans-serif;
-    background:#050505;
-    color:#fff;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:25px 18px;
+html{
+    scroll-behavior:smooth;
 }
 
+body{
+    min-height:100vh;
+    font-family:Arial, "Noto Sans Bengali", sans-serif;
+    color:#fff;
+    background:#050505;
+    overflow-x:hidden;
+}
+
+/* Background */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.82)
+        ),
+        url("IMG_6520.PNG") center/cover no-repeat;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,183,0,.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(255,150,0,.08),
+            transparent 40%
+        );
+    pointer-events:none;
+}
+
+/* Main */
 .container{
     width:100%;
-    max-width:480px;
-    text-align:center;
-}
-
-.logo{
-    width:145px;
-    height:145px;
-    margin:0 auto 22px;
-    border-radius:50%;
-    border:2px solid #d7b55b;
-    background:#111;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 0 35px rgba(215,181,91,.25);
-}
-
-.logo-text{
-    font-size:42px;
-    font-weight:bold;
-    color:#d7b55b;
-}
-
-h1{
-    font-size:29px;
-    margin-bottom:9px;
-}
-
-.subtitle{
-    color:#bdbdbd;
-    font-size:15px;
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-.buttons{
+    max-width:520px;
+    min-height:100vh;
+    margin:auto;
+    padding:35px 20px 25px;
     display:flex;
     flex-direction:column;
-    gap:13px;
+    align-items:center;
 }
 
-.btn{
+/* Logo */
+.logo-area{
     width:100%;
-    min-height:64px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.brand-logo{
+    width:190px;
+    height:190px;
+    object-fit:contain;
+    display:block;
+    filter:
+        drop-shadow(0 0 12px rgba(255,193,7,.35))
+        drop-shadow(0 0 30px rgba(255,165,0,.15));
+}
+
+/* Title */
+.title{
+    text-align:center;
+    margin-bottom:8px;
+}
+
+.title h1{
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:#fff;
+    text-shadow:
+        0 0 8px rgba(255,193,7,.25);
+}
+
+.title h1 span{
+    color:#f5b400;
+}
+
+.subtitle-bn{
+    font-size:17px;
+    font-weight:600;
+    margin-top:8px;
+    color:#f7c94c;
+}
+
+.subtitle-en{
+    font-size:14px;
+    line-height:1.6;
+    margin-top:4px;
+    color:#ddd;
+}
+
+/* Buttons area */
+.links{
+    width:100%;
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+/* Button */
+.link-btn{
+    position:relative;
+    width:100%;
+    min-height:72px;
     padding:12px 18px;
-    border-radius:14px;
-    text-decoration:none;
     display:flex;
     align-items:center;
-    gap:14px;
-    text-align:left;
-    transition:.2s ease;
-    border:1px solid #292929;
-    background:#141414;
+    gap:15px;
+
     color:#fff;
+    text-decoration:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(35,35,35,.94),
+            rgba(12,12,12,.94)
+        );
+
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:16px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-    border-color:#d7b55b;
+.link-btn:hover{
+    transform:translateY(-3px);
+    border-color:#f5b400;
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.55),
+        0 0 20px rgba(245,180,0,.12);
 }
 
+.link-btn:active{
+    transform:scale(.98);
+}
+
+/* Icon */
 .icon{
-    width:42px;
-    height:42px;
-    border-radius:11px;
+    width:47px;
+    height:47px;
+    min-width:47px;
+    border-radius:13px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
-    font-weight:bold;
-    flex-shrink:0;
+    background:#151515;
+    border:1px solid rgba(255,255,255,.1);
 }
 
-.text{
-    display:flex;
-    flex-direction:column;
-    gap:3px;
+.icon svg{
+    width:27px;
+    height:27px;
+    fill:currentColor;
 }
 
-.bn{
-    font-size:16px;
-    font-weight:bold;
-}
-
-.en{
-    font-size:13px;
-    color:#999;
-}
-
+/* Telegram */
 .telegram .icon{
-    background:#229ED9;
+    color:#29a9ea;
 }
 
+/* Facebook */
 .facebook .icon{
-    background:#1877F2;
+    color:#1877f2;
 }
 
+/* Instagram */
 .instagram .icon{
-    background:#E1306C;
+    color:#ff3b81;
 }
 
+/* Trading */
 .trading{
-    background:linear-gradient(135deg,#1c1709,#0e0e0e);
-    border:1px solid #d7b55b;
+    border-color:rgba(245,180,0,.55);
 }
 
 .trading .icon{
-    background:#d7b55b;
-    color:#000;
+    color:#f5b400;
 }
 
+.button-text{
+    flex:1;
+    text-align:left;
+}
+
+.button-text .bn{
+    display:block;
+    font-size:17px;
+    font-weight:800;
+    line-height:1.25;
+}
+
+.button-text .en{
+    display:block;
+    font-size:12px;
+    color:#aaa;
+    margin-top:4px;
+}
+
+.arrow{
+    font-size:24px;
+    color:#777;
+    transition:.25s;
+}
+
+.link-btn:hover .arrow{
+    color:#f5b400;
+    transform:translateX(3px);
+}
+
+/* Footer */
 .footer{
-    margin-top:25px;
-    color:#666;
-    font-size:11px;
+    margin-top:auto;
+    padding-top:35px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
 }
 
-@media(max-width:380px){
-    h1{
+.footer strong{
+    color:#c99b25;
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    .container{
+        padding:25px 15px 20px;
+    }
+
+    .brand-logo{
+        width:155px;
+        height:155px;
+    }
+
+    .title h1{
         font-size:25px;
     }
 
-    .logo{
-        width:125px;
-        height:125px;
+    .subtitle-bn{
+        font-size:15px;
     }
 
-    .btn{
-        min-height:60px;
+    .subtitle-en{
+        font-size:12px;
+    }
+
+    .link-btn{
+        min-height:68px;
+        padding:10px 14px;
+        border-radius:14px;
+    }
+
+    .icon{
+        width:43px;
+        height:43px;
+        min-width:43px;
+    }
+
+    .icon svg{
+        width:24px;
+        height:24px;
+    }
+
+    .button-text .bn{
+        font-size:15px;
+    }
+
+    .button-text .en{
+        font-size:11px;
+    }
+
+    .arrow{
+        font-size:20px;
     }
 }
 </style>
@@ -165,79 +322,147 @@ h1{
 
 <div class="container">
 
-    <div class="logo">
-        <div class="logo-text">JT</div>
+    <!-- LOGO -->
+    <div class="logo-area">
+        <img
+            class="brand-logo"
+            src="a_clean_logo_emblem_on_a_transparent_background_p.png"
+            alt="Jirmas Trade Zone Logo"
+        >
     </div>
 
-    <h1>JIRMAS TRADE ZONE 📈</h1>
+    <!-- TITLE -->
+    <div class="title">
 
-    <p class="subtitle">
-        ট্রেডিং শিক্ষা • মার্কেট বিশ্লেষণ • ট্রেডিং ইনসাইট<br>
-        Trading Education • Market Analysis • Trading Insights
-    </p>
+        <h1>
+            <span>JIRMAS</span> TRADE ZONE
+        </h1>
 
-    <div class="buttons">
+        <div class="subtitle-bn">
+            ট্রেডিং শিক্ষা • মার্কেট বিশ্লেষণ • ট্রেডিং ইনসাইট
+        </div>
 
-        <a class="btn telegram"
-           href="https://t.me/jirmastradezone"
-           target="_blank"
-           rel="noopener noreferrer">
+        <div class="subtitle-en">
+            Trading Education • Market Analysis • Trading Insights
+        </div>
 
-            <div class="icon">✈️</div>
+    </div>
 
-            <div class="text">
+
+    <!-- LINKS -->
+    <div class="links">
+
+        <!-- TELEGRAM -->
+        <a
+            class="link-btn telegram"
+            href="https://t.me/jirmastradezone"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M21.8 3.2 18.7 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6.1 13.5 1.2 12c-1.1-.3-1.1-1 .2-1.5L20.5 3c.9-.3 1.7.2 1.3.2z"/>
+                </svg>
+
+            </div>
+
+            <div class="button-text">
                 <span class="bn">টেলিগ্রাম চ্যানেলে যোগ দিন</span>
                 <span class="en">Join Telegram Channel</span>
             </div>
 
+            <div class="arrow">›</div>
+
         </a>
 
-        <a class="btn facebook"
-           href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
-           target="_blank"
-           rel="noopener noreferrer">
 
-            <div class="icon">f</div>
+        <!-- FACEBOOK -->
+        <a
+            class="link-btn facebook"
+            href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
-            <div class="text">
-                <span class="bn">ফেসবুক পেজে যুক্ত হোন</span>
+            <div class="icon">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/>
+                </svg>
+
+            </div>
+
+            <div class="button-text">
+                <span class="bn">ফেসবুক পেজে যুক্ত হন</span>
                 <span class="en">Join Facebook Page</span>
             </div>
 
+            <div class="arrow">›</div>
+
         </a>
 
-        <a class="btn instagram"
-           href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
-           target="_blank"
-           rel="noopener noreferrer">
 
-            <div class="icon">◎</div>
+        <!-- INSTAGRAM -->
+        <a
+            class="link-btn instagram"
+            href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
-            <div class="text">
+            <div class="icon">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                </svg>
+
+            </div>
+
+            <div class="button-text">
                 <span class="bn">ইনস্টাগ্রামে ফলো করুন</span>
                 <span class="en">Follow on Instagram</span>
             </div>
 
+            <div class="arrow">›</div>
+
         </a>
 
-        <a class="btn trading"
-           href="https://broker-qx.pro/sign-up/?lid=2167447"
-           target="_blank"
-           rel="noopener noreferrer">
 
-            <div class="icon">🚀</div>
+        <!-- TRADING ACCOUNT -->
+        <a
+            class="link-btn trading"
+            href="https://broker-qx.pro/sign-up/?lid=2167447"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
-            <div class="text">
+            <div class="icon">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 17.5 9.2 12l3.2 3.2L20 7.5V11h2V4h-7v2h3.6l-6.2 6.4-3.2-3.2L2.5 16.1 4 17.5z"/>
+                    <path d="M3 20h18v2H3z"/>
+                </svg>
+
+            </div>
+
+            <div class="button-text">
                 <span class="bn">ট্রেডিং অ্যাকাউন্ট খুলুন</span>
                 <span class="en">Create Trading Account</span>
             </div>
+
+            <div class="arrow">›</div>
 
         </a>
 
     </div>
 
+
+    <!-- FOOTER -->
     <div class="footer">
-        ©️ 2026 Jirmas Trade Zone
+        ©️ 2026 <strong>Jirmas Trade Zone</strong><br>
+        Trade • Learn • Grow
     </div>
 
 </div>
