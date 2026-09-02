@@ -19,300 +19,275 @@ html{
 
 body{
     min-height:100vh;
-    font-family:Arial, "Noto Sans Bengali", sans-serif;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
     color:#fff;
     background:#050505;
     overflow-x:hidden;
 }
 
-/* Background */
+/* BACKGROUND */
 body::before{
     content:"";
     position:fixed;
     inset:0;
-    z-index:-3;
     background:
         linear-gradient(
             rgba(0,0,0,.72),
-            rgba(0,0,0,.82)
+            rgba(0,0,0,.88)
         ),
-        url("IMG_6520.PNG") center/cover no-repeat;
+        url("IMG_5520.PNG") center/cover no-repeat;
+    z-index:-2;
 }
 
 body::after{
     content:"";
     position:fixed;
     inset:0;
-    z-index:-2;
     background:
         radial-gradient(
-            circle at 50% 20%,
-            rgba(255,183,0,.16),
+            circle at 50% 25%,
+            rgba(212,160,23,.18),
             transparent 35%
-        ),
-        radial-gradient(
-            circle at 50% 80%,
-            rgba(255,150,0,.08),
-            transparent 40%
         );
-    pointer-events:none;
+    z-index:-1;
 }
 
-/* Main */
+/* MAIN */
 .container{
     width:100%;
-    max-width:520px;
-    min-height:100vh;
+    max-width:680px;
     margin:auto;
-    padding:35px 20px 25px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    padding:45px 24px 30px;
 }
 
-/* Logo */
+/* LOGO */
 .logo-area{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:18px;
-}
-
-.brand-logo{
-    width:190px;
-    height:190px;
-    object-fit:contain;
-    display:block;
-    filter:
-        drop-shadow(0 0 12px rgba(255,193,7,.35))
-        drop-shadow(0 0 30px rgba(255,165,0,.15));
-}
-
-/* Title */
-.title{
     text-align:center;
-    margin-bottom:8px;
+    margin-bottom:20px;
 }
 
-.title h1{
-    font-size:32px;
-    font-weight:900;
-    letter-spacing:1px;
+.logo{
+    width:150px;
+    height:150px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.logo svg{
+    width:145px;
+    height:145px;
+    filter:
+        drop-shadow(0 0 8px rgba(255,190,40,.35))
+        drop-shadow(0 0 22px rgba(255,190,40,.12));
+}
+
+/* TITLE */
+.brand{
+    text-align:center;
+    font-size:38px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    margin-top:5px;
+}
+
+.brand .gold{
+    color:#f5b91e;
+}
+
+.brand .white{
     color:#fff;
-    text-shadow:
-        0 0 8px rgba(255,193,7,.25);
 }
 
-.title h1 span{
-    color:#f5b400;
+.tagline-bn{
+    text-align:center;
+    margin-top:14px;
+    font-size:21px;
+    font-weight:700;
+    color:#f2c34b;
 }
 
-.subtitle-bn{
-    font-size:17px;
-    font-weight:600;
+.tagline-en{
+    text-align:center;
     margin-top:8px;
-    color:#f7c94c;
-}
-
-.subtitle-en{
-    font-size:14px;
-    line-height:1.6;
-    margin-top:4px;
+    font-size:17px;
     color:#ddd;
 }
 
-/* Buttons area */
-.links{
-    width:100%;
-    margin-top:28px;
+/* BUTTONS */
+.buttons{
+    margin-top:55px;
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:20px;
 }
 
-/* Button */
-.link-btn{
-    position:relative;
+.btn{
     width:100%;
-    min-height:72px;
-    padding:12px 18px;
+    min-height:108px;
     display:flex;
     align-items:center;
-    gap:15px;
-
-    color:#fff;
     text-decoration:none;
+    color:#fff;
 
     background:
         linear-gradient(
             135deg,
-            rgba(35,35,35,.94),
+            rgba(35,35,35,.92),
             rgba(12,12,12,.94)
         );
 
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:16px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:22px;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,.35),
-        inset 0 1px 0 rgba(255,255,255,.05);
+        0 8px 25px rgba(0,0,0,.4),
+        inset 0 1px 0 rgba(255,255,255,.06);
 
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+    transition:.25s ease;
 }
 
-.link-btn:hover{
+.btn:hover{
     transform:translateY(-3px);
-    border-color:#f5b400;
+    border-color:#e6ad20;
     box-shadow:
-        0 12px 35px rgba(0,0,0,.55),
-        0 0 20px rgba(245,180,0,.12);
+        0 12px 30px rgba(0,0,0,.5),
+        0 0 20px rgba(230,173,32,.12);
 }
 
-.link-btn:active{
+.btn:active{
     transform:scale(.98);
 }
 
-/* Icon */
-.icon{
-    width:47px;
-    height:47px;
-    min-width:47px;
-    border-radius:13px;
+/* ICON */
+.icon-box{
+    width:68px;
+    height:68px;
+    min-width:68px;
+    margin-left:18px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#151515;
-    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:18px;
+
+    background:#111;
+    border:1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        inset 0 0 12px rgba(255,255,255,.03);
 }
 
-.icon svg{
-    width:27px;
-    height:27px;
-    fill:currentColor;
+.icon-box svg{
+    width:36px;
+    height:36px;
 }
 
-/* Telegram */
-.telegram .icon{
-    color:#29a9ea;
-}
-
-/* Facebook */
-.facebook .icon{
-    color:#1877f2;
-}
-
-/* Instagram */
-.instagram .icon{
-    color:#ff3b81;
-}
-
-/* Trading */
-.trading{
-    border-color:rgba(245,180,0,.55);
-}
-
-.trading .icon{
-    color:#f5b400;
-}
-
-.button-text{
+/* TEXT */
+.btn-text{
     flex:1;
-    text-align:left;
+    padding:0 15px;
 }
 
-.button-text .bn{
+.bn{
     display:block;
-    font-size:17px;
-    font-weight:800;
-    line-height:1.25;
+    font-size:21px;
+    font-weight:700;
+    margin-bottom:6px;
 }
 
-.button-text .en{
+.en{
     display:block;
-    font-size:12px;
+    font-size:16px;
     color:#aaa;
-    margin-top:4px;
 }
 
 .arrow{
-    font-size:24px;
-    color:#777;
-    transition:.25s;
+    font-size:32px;
+    color:#888;
+    margin-right:20px;
+    font-weight:300;
 }
 
-.link-btn:hover .arrow{
-    color:#f5b400;
-    transform:translateX(3px);
+/* TRADING BUTTON */
+.trading{
+    border-color:rgba(239,183,29,.8);
 }
 
-/* Footer */
+/* FOOTER */
 .footer{
-    margin-top:auto;
-    padding-top:35px;
     text-align:center;
+    margin-top:55px;
+    padding-bottom:10px;
+    font-size:13px;
     color:#777;
-    font-size:12px;
 }
 
-.footer strong{
-    color:#c99b25;
+.footer span{
+    color:#c59620;
 }
 
-/* Mobile */
-@media(max-width:480px){
+/* MOBILE */
+@media(max-width:600px){
 
     .container{
-        padding:25px 15px 20px;
+        padding:38px 24px 25px;
     }
 
-    .brand-logo{
-        width:155px;
-        height:155px;
+    .logo{
+        width:145px;
+        height:145px;
     }
 
-    .title h1{
-        font-size:25px;
+    .logo svg{
+        width:140px;
+        height:140px;
     }
 
-    .subtitle-bn{
+    .brand{
+        font-size:32px;
+        letter-spacing:1px;
+    }
+
+    .tagline-bn{
+        font-size:18px;
+    }
+
+    .tagline-en{
         font-size:15px;
     }
 
-    .subtitle-en{
-        font-size:12px;
+    .buttons{
+        margin-top:48px;
+        gap:18px;
     }
 
-    .link-btn{
-        min-height:68px;
-        padding:10px 14px;
-        border-radius:14px;
+    .btn{
+        min-height:105px;
+        border-radius:20px;
     }
 
-    .icon{
-        width:43px;
-        height:43px;
-        min-width:43px;
+    .icon-box{
+        width:64px;
+        height:64px;
+        min-width:64px;
+        margin-left:15px;
     }
 
-    .icon svg{
-        width:24px;
-        height:24px;
+    .bn{
+        font-size:19px;
     }
 
-    .button-text .bn{
-        font-size:15px;
-    }
-
-    .button-text .en{
-        font-size:11px;
+    .en{
+        font-size:14px;
     }
 
     .arrow{
-        font-size:20px;
+        margin-right:14px;
+        font-size:28px;
     }
 }
 </style>
@@ -324,145 +299,262 @@ body::after{
 
     <!-- LOGO -->
     <div class="logo-area">
-        <img
-            class="brand-logo"
-            src="a_clean_logo_emblem_on_a_transparent_background_p.png"
-            alt="Jirmas Trade Zone Logo"
-        >
+        <div class="logo">
+
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Outer circle -->
+                <circle
+                    cx="100"
+                    cy="100"
+                    r="91"
+                    fill="#090909"
+                    stroke="#d9a51c"
+                    stroke-width="3"
+                />
+
+                <circle
+                    cx="100"
+                    cy="100"
+                    r="82"
+                    fill="none"
+                    stroke="#777"
+                    stroke-width="1"
+                />
+
+                <!-- Candlesticks -->
+                <line x1="55" y1="85" x2="55" y2="125"
+                      stroke="#d9a51c" stroke-width="4"/>
+                <rect x="47" y="96" width="16" height="22"
+                      rx="2" fill="#d9a51c"/>
+
+                <line x1="75" y1="70" x2="75" y2="120"
+                      stroke="#fff" stroke-width="4"/>
+                <rect x="67" y="82" width="16" height="27"
+                      rx="2" fill="#fff"/>
+
+                <line x1="95" y1="58" x2="95" y2="112"
+                      stroke="#d9a51c" stroke-width="4"/>
+                <rect x="87" y="70" width="16" height="30"
+                      rx="2" fill="#d9a51c"/>
+
+                <line x1="115" y1="72" x2="115" y2="116"
+                      stroke="#fff" stroke-width="4"/>
+                <rect x="107" y="82" width="16" height="25"
+                      rx="2" fill="#fff"/>
+
+                <line x1="135" y1="50" x2="135" y2="108"
+                      stroke="#d9a51c" stroke-width="4"/>
+                <rect x="127" y="62" width="16" height="31"
+                      rx="2" fill="#d9a51c"/>
+
+                <!-- J -->
+                <path
+                    d="M55 132
+                       L55 151
+                       Q55 165 70 165
+                       L86 165
+                       Q100 165 100 151
+                       L100 126"
+                    fill="none"
+                    stroke="#d9a51c"
+                    stroke-width="9"
+                    stroke-linecap="round"
+                />
+
+                <!-- T -->
+                <path
+                    d="M112 126 L153 126
+                       M133 126 L133 166"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="9"
+                    stroke-linecap="round"
+                />
+
+                <!-- Small trend line -->
+                <path
+                    d="M45 142 L63 133 L78 145 L96 130 L112 138 L145 112"
+                    fill="none"
+                    stroke="#d9a51c"
+                    stroke-width="3"
+                    opacity=".9"
+                />
+
+            </svg>
+
+        </div>
     </div>
 
-    <!-- TITLE -->
-    <div class="title">
+    <!-- BRAND -->
+    <div class="brand">
+        <span class="gold">JIRMAS</span>
+        <span class="white"> TRADE ZONE</span>
+    </div>
 
-        <h1>
-            <span>JIRMAS</span> TRADE ZONE
-        </h1>
+    <div class="tagline-bn">
+        ট্রেডিং শিক্ষা • মার্কেট বিশ্লেষণ • ট্রেডিং ইনসাইট
+    </div>
 
-        <div class="subtitle-bn">
-            ট্রেডিং শিক্ষা • মার্কেট বিশ্লেষণ • ট্রেডিং ইনসাইট
-        </div>
-
-        <div class="subtitle-en">
-            Trading Education • Market Analysis • Trading Insights
-        </div>
-
+    <div class="tagline-en">
+        Trading Education • Market Analysis • Trading Insights
     </div>
 
 
-    <!-- LINKS -->
-    <div class="links">
+    <!-- BUTTONS -->
+    <div class="buttons">
 
         <!-- TELEGRAM -->
-        <a
-            class="link-btn telegram"
-            href="https://t.me/jirmastradezone"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a class="btn"
+           href="https://t.me/jirmastradezone"
+           target="_blank">
 
-            <div class="icon">
+            <div class="icon-box">
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M21.8 3.2 18.7 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6.1 13.5 1.2 12c-1.1-.3-1.1-1 .2-1.5L20.5 3c.9-.3 1.7.2 1.3.2z"/>
+                <svg viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <circle cx="24" cy="24" r="23"
+                            fill="#111"/>
+
+                    <path
+                        d="M8 23.5L39 11L33.5 37L24 29L18 34L19.5 26.5Z"
+                        fill="#229ED9"/>
+
+                    <path
+                        d="M19.5 26.5L34 16L24 29"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="1.8"/>
+
                 </svg>
 
             </div>
 
-            <div class="button-text">
+            <div class="btn-text">
                 <span class="bn">টেলিগ্রাম চ্যানেলে যোগ দিন</span>
                 <span class="en">Join Telegram Channel</span>
             </div>
 
-            <div class="arrow">›</div>
-
+            <span class="arrow">›</span>
         </a>
 
 
         <!-- FACEBOOK -->
-        <a
-            class="link-btn facebook"
-            href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a class="btn"
+           href="https://www.facebook.com/share/1Ex6zWLjgZ/?mibextid=wwXIfr"
+           target="_blank">
 
-            <div class="icon">
+            <div class="icon-box">
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/>
+                <svg viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <circle cx="24" cy="24" r="23"
+                            fill="#111"/>
+
+                    <path
+                        d="M27 15H31V9H26C20 9 17 13 17 19V22H12V28H17V40H24V28H30L31 22H24V19C24 17 25 15 27 15Z"
+                        fill="#1877F2"/>
+
                 </svg>
 
             </div>
 
-            <div class="button-text">
+            <div class="btn-text">
                 <span class="bn">ফেসবুক পেজে যুক্ত হন</span>
                 <span class="en">Join Facebook Page</span>
             </div>
 
-            <div class="arrow">›</div>
-
+            <span class="arrow">›</span>
         </a>
 
 
         <!-- INSTAGRAM -->
-        <a
-            class="link-btn instagram"
-            href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a class="btn"
+           href="https://www.instagram.com/jirmastrader?igsi=MW8yYTZidnRtcGgzZQ=="
+           target="_blank">
 
-            <div class="icon">
+            <div class="icon-box">
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                <svg viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <rect x="8" y="8" width="32" height="32"
+                          rx="9"
+                          fill="none"
+                          stroke="#E1306C"
+                          stroke-width="4"/>
+
+                    <circle cx="24" cy="24" r="8"
+                            fill="none"
+                            stroke="#E1306C"
+                            stroke-width="4"/>
+
+                    <circle cx="33" cy="15" r="2.5"
+                            fill="#E1306C"/>
+
                 </svg>
 
             </div>
 
-            <div class="button-text">
-                <span class="bn">ইনস্টাগ্রামে ফলো করুন</span>
+            <div class="btn-text">
+                <span class="bn">ইনস্টাগ্রাম ফলো করুন</span>
                 <span class="en">Follow on Instagram</span>
             </div>
 
-            <div class="arrow">›</div>
-
+            <span class="arrow">›</span>
         </a>
 
 
         <!-- TRADING ACCOUNT -->
-        <a
-            class="link-btn trading"
-            href="https://broker-qx.pro/sign-up/?lid=2167447"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a class="btn trading"
+           href="https://broker-qx.pro/sign-up/?lid=2167447"
+           target="_blank">
 
-            <div class="icon">
+            <div class="icon-box">
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M4 17.5 9.2 12l3.2 3.2L20 7.5V11h2V4h-7v2h3.6l-6.2 6.4-3.2-3.2L2.5 16.1 4 17.5z"/>
-                    <path d="M3 20h18v2H3z"/>
+                <svg viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <path
+                        d="M8 36L19 25L25 30L39 14"
+                        fill="none"
+                        stroke="#f5b91e"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                    <path
+                        d="M31 14H39V22"
+                        fill="none"
+                        stroke="#f5b91e"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                    <line x1="8" y1="40"
+                          x2="40" y2="40"
+                          stroke="#555"
+                          stroke-width="2"/>
+
                 </svg>
 
             </div>
 
-            <div class="button-text">
+            <div class="btn-text">
                 <span class="bn">ট্রেডিং অ্যাকাউন্ট খুলুন</span>
                 <span class="en">Create Trading Account</span>
             </div>
 
-            <div class="arrow">›</div>
-
+            <span class="arrow">›</span>
         </a>
 
     </div>
 
 
-    <!-- FOOTER -->
     <div class="footer">
-        ©️ 2026 <strong>Jirmas Trade Zone</strong><br>
-        Trade • Learn • Grow
+        ©️ 2026 <span>Jirmas Trade Zone</span>
     </div>
 
 </div>
